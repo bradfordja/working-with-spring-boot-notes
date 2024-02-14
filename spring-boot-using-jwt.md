@@ -1,10 +1,6 @@
-Spring Security to Spring Boot project using JWT
+### Spring Security to Spring Boot project using JWT
 
-As interviewing for a Senior Java developer role.  Given the set the of following questions please give simple answers that  senior Core Java, Java 8, Spring Boot, Microservices developer would give and if possible include sample code snipped with comments.
-
-1. Give me the steps for adding Spring Security to Spring Boot project using JWT and using it to  create and validate/login users
-
-Certainly! Integrating JWT with Spring Security in a Spring Boot application involves a series of steps. Here's a simplified guide:
+Integrating JWT with Spring Security in a Spring Boot application involves a series of steps. Here's a simplified guide:
 
 **1. Add Dependencies to `pom.xml`**:
 
