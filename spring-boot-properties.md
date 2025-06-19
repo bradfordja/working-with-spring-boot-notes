@@ -209,5 +209,3 @@ It automatically updates the database schema to match entity definitions.
 | `spring.threads.virtual.enabled`                               | Enable virtual threads               |
 
 ---
-
-This reference helps Spring Boot developers and interview candidates explain critical properties with real-world context and examples.

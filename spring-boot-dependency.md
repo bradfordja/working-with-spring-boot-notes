@@ -142,5 +142,3 @@ Here are some of the most common dependencies you might come across when working
 ```
 
 ---
-
-I hope this list helps you in understanding some common Spring Boot dependencies.

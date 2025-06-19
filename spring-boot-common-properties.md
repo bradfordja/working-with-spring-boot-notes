@@ -203,5 +203,3 @@ spring.security.session-management.session-creation-policy=stateless
 | `spring.threads.virtual.enabled`                          | Enable virtual threads               |
 
 ---
-
-This file prepares you to confidently discuss Spring Boot configuration during interviews, with practical examples and concise explanations.
