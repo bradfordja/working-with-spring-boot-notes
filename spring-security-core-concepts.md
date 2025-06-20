@@ -1,4 +1,4 @@
-## 🧱 SSpring Security - Core Concepts
+## 🧱 Spring Security - Core Concepts
 
 Below is an in-depth overview of the most important core concepts of Spring Security, including simple explanations, practical use-cases, and clear code snippets to guide you.
 
@@ -13,6 +13,7 @@ Use-case:
 	•	Logging into web applications.
 
 Example (Basic Authentication Config):
+
 ```java
 @Configuration
 @EnableWebSecurity
@@ -42,6 +43,7 @@ public class SecurityConfig {
   }
 }
 ```
+
 ### ✅ 2. Authorization
 
 🚀 Explanation:
@@ -51,6 +53,7 @@ Use-case:
 	•	Restricting access to admin endpoints.
 
 Example (Role-Based Authorization):
+
 ```java
 @Configuration
 @EnableWebSecurity
@@ -68,6 +71,7 @@ public class SecurityConfig {
   }
 }
 ```
+
 ### ✅ 3. UserDetails & UserDetailsService
 
 🚀 Explanation:
@@ -78,6 +82,7 @@ Use-case:
 	•	Loading users from a database.
 
 Example (Custom UserDetailsService):
+
 ```java
 @Service
 public class MyUserDetailsService implements UserDetailsService {
@@ -95,6 +100,7 @@ public class MyUserDetailsService implements UserDetailsService {
   }
 }
 ```
+
 ### ✅ 4. Password Encoding
 
 🚀 Explanation:
@@ -104,12 +110,14 @@ Use-case:
 	•	Safely storing passwords in databases.
 
 Example:
+
 ```java
 @Bean
 public PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();
 }
 ```
+
 // Usage:
 String hashedPassword = passwordEncoder.encode("password123");
 
@@ -136,6 +144,7 @@ Use-case:
 	•	REST APIs or microservices authentication.
 
 Example (JWT token parsing in Spring Security Filter):
+
 ```java
 @Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
@@ -162,6 +171,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     }
 }
 ```
+
 ### ✅ 7. OAuth2 & OpenID Connect
 
 🚀 Explanation:
@@ -171,6 +181,7 @@ Use-case:
 	•	Login via Google, Facebook, GitHub, etc.
 
 Example (OAuth2 Login configuration):
+
 ```java
 @Configuration
 @EnableWebSecurity
@@ -185,6 +196,7 @@ public class SecurityConfig {
   }
 }
 ```
+
 ### ✅ 8. Method-level Security
 
 🚀 Explanation:
@@ -194,6 +206,7 @@ Use-case:
 	•	Restricting method execution based on roles.
 
 Example:
+
 ```java
 @EnableMethodSecurity
 @Configuration
@@ -210,6 +223,7 @@ public class UserService {
     }
 }
 ```
+
 ### ✅ 9. Cross Site Request Forgery (CSRF) Protection
 
 🚀 Explanation:
@@ -219,6 +233,7 @@ Use-case:
 	•	Web form submissions protection.
 
 Example (CSRF configuration):
+
 ```java
 @Bean
 SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
@@ -228,6 +243,7 @@ SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         .build();
 }
 ```
+
 ### ✅ 10. Security Filters & FilterChain
 
 🚀 Explanation:
@@ -237,6 +253,7 @@ Use-case:
 	•	Adding custom security checks.
 
 Example (custom filter):
+
 ```java
 @Component
 public class CustomLoggingFilter extends OncePerRequestFilter {
@@ -247,7 +264,9 @@ public class CustomLoggingFilter extends OncePerRequestFilter {
     }
 }
 ```
+
 Configure in SecurityFilterChain:
+
 ```java
 @Bean
 public SecurityFilterChain securityFilterChain(HttpSecurity http, CustomLoggingFilter customLoggingFilter) throws Exception {
@@ -256,6 +275,7 @@ public SecurityFilterChain securityFilterChain(HttpSecurity http, CustomLoggingF
         .build();
 }
 ```
+
 ### 🎯 Summary of Core Concepts
 
 Concept	Role/Usage

@@ -9,6 +9,7 @@ Here is a complete Spring Boot MVC + JPA transactional example that updates user
 This will update all users where active = true and managerId = 5675 to managerId = 4737. On error, changes are rolled back.
 
 ### UserDTO.java
+
 ```java
 package com.example.demo.dto;
 
@@ -30,6 +31,7 @@ public class UserDTO {
 ```
 
 ### User.java (Entity)
+
 ```java
 package com.example.demo.model;
 
@@ -65,6 +67,7 @@ public class User {
 ```
 
 ### UserRepository.java
+
 ```java
 package com.example.demo.repository;
 
@@ -81,6 +84,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 ```
 
 ### UserService.java
+
 ```java
 package com.example.demo.service;
 
@@ -115,6 +119,7 @@ public class UserService {
 ```
 
 ### UserController.java
+
 ```java
 package com.example.demo.controller;
 
